@@ -5,7 +5,7 @@ var serienummerCount = params.serienummerCount;
 console.log('serienummerCount = ' + serienummerCount);
 
 // Onderstaande lijns is om serienummerCount the hard setten tijden dev
-serienummerCount = 18; console.log('DEV serienummerCount = ' + serienummerCount);
+serienummerCount = 50; console.log('DEV serienummerCount = ' + serienummerCount);
 
 // Maak array met onbestaande serienummers
 var serienummers = new Array();
