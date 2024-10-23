@@ -1,9 +1,23 @@
 <?php
 
+$servername = "localhost";
+$username = "root";
+$password = "";
+
+try {
+  $conn = new PDO("mysql:host=$servername;dbname=GiftVouchers", $username, $password);
+  // set the PDO error mode to exception
+  $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+  echo "Connected successfully";
+} catch(PDOException $e) {
+  echo "Connection failed: " . $e->getMessage();
+}
+
 // set GET values in variables
 $numberAmount = $_GET["numberAmount"]; // INT
 $serienummerCount = $_GET["serienummerCount"]; // INT
 
+// barcode kan max 23 nummers zijn
 // create unique serialnumbers with given number amount
 // set the minimun and maximum range of serialnumbers
 $min = '';
