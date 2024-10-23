@@ -5,14 +5,14 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-
-<button onclick="openTab()">Maak pagina met barcodes</button>
-
-<script>
-    function openTab() {
-    window.open("barcode.html?serienummerCount=10", "_blank");
-    }
-</script>
+  
+<form action="php/barcode.php" method="GET" target="_blank">
+  <label for="fname">Aantal getallen in barcode:</label><br>
+  <input type="number" id="numberAmount" name="numberAmount" value="10"><br>
+  <label for="lname">Aantal Barcodes:</label><br>
+  <input type="number" id="serienummerCount" name="serienummerCount" value="50"><br><br>
+  <input type="submit" value="Generate Barcodes">
+</form> 
 
 </body>
 </html>
